@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-04-20T21:47:06.575884" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Demo" source="/Users/toon/Documents/GitHub/appium-mobile-automatetest/assignment/test_demo.robot">
+<test id="s1-t1" name="Testcase-001 Open New ToDo and validate topic on page" line="31">
+<kw name="Open Test Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=${APPIUM_SERVER}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-04-20T21:47:06.671635" elapsed="8.733250"/>
+</kw>
+<status status="PASS" start="2024-04-20T21:47:06.671343" elapsed="8.734601"/>
+</kw>
+<kw name="Open New Todo">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:15.408085" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:16.469465" level="INFO">criteria is android:id/button1</msg>
+<arg>id=android:id/button1</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-04-20T21:47:15.408040" elapsed="1.061599"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:16.470053" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:17.749763" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<arg>id=com.android.permissioncontroller:id/permission_allow_button</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-04-20T21:47:16.469987" elapsed="1.279886"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:17.750124" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:17.953016" level="INFO">criteria is com.avjindersinghsekhon.minimaltodo:id/addToDoItemFAB</msg>
+<arg>id=com.avjindersinghsekhon.minimaltodo:id/addToDoItemFAB</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-04-20T21:47:17.750089" elapsed="0.203093"/>
+</kw>
+<status status="PASS" start="2024-04-20T21:47:15.407201" elapsed="2.546163"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:17.957076" level="INFO">Typing text 'Meeting@room2' into text field 'xpath=//android.widget.EditText[@resource-id="com.avjindersinghsekhon.minimaltodo:id/userToDoEditText"]'</msg>
+<msg time="2024-04-20T21:47:19.250968" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.avjindersinghsekhon.minimaltodo:id/userToDoEditText"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="com.avjindersinghsekhon.minimaltodo:id/userToDoEditText"]</arg>
+<arg>${topicName_text}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-04-20T21:47:17.953873" elapsed="1.297190"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:19.251336" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:19.991835" level="INFO">criteria is com.avjindersinghsekhon.minimaltodo:id/toDoHasDateSwitchCompat</msg>
+<arg>id=com.avjindersinghsekhon.minimaltodo:id/toDoHasDateSwitchCompat</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-04-20T21:47:19.251305" elapsed="0.740620"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:19.992193" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:20.798888" level="INFO">criteria is com.avjindersinghsekhon.minimaltodo:id/makeToDoFloatingActionButton</msg>
+<arg>id=com.avjindersinghsekhon.minimaltodo:id/makeToDoFloatingActionButton</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-04-20T21:47:19.992162" elapsed="0.806814"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:21.981909" level="INFO">xpath criteria: //android.widget.LinearLayout[@resource-id="com.avjindersinghsekhon.minimaltodo:id/listItemLinearLayout"]
+xpath criteria: //android.widget.LinearLayout[@resource-id="com.avjindersinghsekhon.minimaltodo:id/listItemLinearLayout"]</msg>
+<arg>xpath=${TopicSelector}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-04-20T21:47:20.799238" elapsed="1.182759"/>
+</kw>
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:22.029090" level="INFO">xpath criteria: //android.widget.LinearLayout[@resource-id="com.avjindersinghsekhon.minimaltodo:id/listItemLinearLayout"]</msg>
+<arg>xpath=${TopicSelector}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-04-20T21:47:21.982285" elapsed="0.046895"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-04-20T21:47:22.068010" level="INFO">Current page contains text 'Meeting@room2'.</msg>
+<arg>${topicName_text}</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-04-20T21:47:22.029407" elapsed="0.038760"/>
+</kw>
+<status status="PASS" start="2024-04-20T21:47:06.671084" elapsed="15.397515"/>
+</test>
+<status status="PASS" start="2024-04-20T21:47:06.576492" elapsed="15.493264"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Demo">Test Demo</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-20T21:47:15.408085" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:16.470053" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:17.750124" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:19.251336" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-04-20T21:47:19.992193" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+</errors>
+</robot>
